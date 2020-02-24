@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { RegisterUserService } from 'src/app/services/register-user.service';
 
 import {inputLogin} from './constants.js';
 
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   messageAlert: string = 'Campo obligatorio';
   inputData: string = inputLogin;
 
-  constructor( private fb: FormBuilder ) { }
+  constructor( private fb: FormBuilder, private registerUserService: RegisterUserService ) { }
 
   ngOnInit() {
     this.buildForm();
@@ -32,7 +33,16 @@ export class LoginComponent implements OnInit {
   }
 
   addPost() {
-    console.log(this.registerForm.value);
+
+    const data = {
+          "password_confirmation": this.registerForm.value.passwordConfirmation,
+          "first_name": this.registerForm.value.firstName,
+          "last_name": this.registerForm.value.lastName,
+          "locale": "en",
+          ...this.registerForm.value
+    }
+
+    this.registerUserService.userRegister(data).subscribe(responsePost => console.log('Succesfull', responsePost) );
   }
 
 }
