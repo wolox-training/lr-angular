@@ -19,7 +19,6 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.buildForm();
-    console.log(inputLogin);
   }
 
   private buildForm(){
