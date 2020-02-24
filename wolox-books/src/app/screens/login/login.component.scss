@@ -1,9 +1,9 @@
 @import 'src/scss/color.scss';
 @import 'src/scss/fonts.scss';
 
-.from-container{
-  background-color: $Wild-Sand;
-  border-top: 8px solid $Cerulean;
+.from-container {
+  background-color: $wild-sand;
+  border-top: 8px solid $cerulean;
   height: 670px;
   left: 50%;
   position: absolute;
@@ -18,22 +18,22 @@
   padding: 10px;
 }
 
-.section-input{
+.section-input {
   display: flex;
   flex-direction: column;
   height: 80px;
   padding: 5px 25px;
 
-  .text-label{
+  .text-label {
     display: flex;
     font-family: 'Roboto', sans-serif;
-    size: $ContentText;
+    size: $content-text;
     padding-bottom: 5px;
     padding-top: 5px;
-    color: $Black;
+    color: $black;
   }
 
-  .decoration-input{
+  .decoration-input {
     border: none;
     border-radius: 5px;
     height: 32px;
@@ -41,19 +41,19 @@
   }
 }
 
-.message-alert{
-  color: $Red;
-  font-size: $TextAlert;
+.message-alert {
+  color: $red;
+  font-size: $text-alert;
 }
 
-.button{
+.button {
   border-radius: 5px;
-  font-size: $ContentText;
+  font-size: $content-text;
   height: 32px;
   width: 252px;
 }
 
-.section-buttons{
+.section-buttons {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -61,8 +61,8 @@
   justify-content: space-around;
   position: relative;
 
-  &:before{
-    background-color: $Silver-Chalice;
+  &:before {
+    background-color: $silver-chalice;
     content: '';
     height: 2px;
     position: absolute;
@@ -70,12 +70,12 @@
   }
 }
 
-.button-singUp{
-  background-color: $Earls-Green;
+.button-sing-up {
+  background-color: $earls-green;
   color: $white;
 }
 
-.button-login{
-  border: solid 2px $Earls-Green;
-  color: $Earls-Green;
+.button-login {
+  border: solid 2px $earls-green;
+  color: $earls-green;
 }
