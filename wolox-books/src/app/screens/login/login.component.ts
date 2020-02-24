@@ -35,10 +35,10 @@ export class LoginComponent implements OnInit {
   addPost() {
 
     const data = {
-          "password_confirmation": this.registerForm.value.passwordConfirmation,
-          "first_name": this.registerForm.value.firstName,
-          "last_name": this.registerForm.value.lastName,
-          "locale": "en",
+          password_confirmation: this.registerForm.value.passwordConfirmation,
+          first_name: this.registerForm.value.firstName,
+          last_name: this.registerForm.value.lastName,
+          locale: "en",
           ...this.registerForm.value
     }
 
