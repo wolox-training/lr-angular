@@ -18,13 +18,13 @@
   padding: 10px;
 }
 
-.section-input{
+.section-input {
   display: flex;
   flex-direction: column;
   height: 80px;
   padding: 5px 25px;
 
-  .text-label{
+  .text-label {
     display: flex;
     font-family: 'Roboto', sans-serif;
     size: $ContentText;
@@ -33,7 +33,7 @@
     color: $Black;
   }
 
-  .decoration-input{
+  .decoration-input {
     border: none;
     border-radius: 5px;
     height: 32px;
@@ -41,19 +41,19 @@
   }
 }
 
-.message-alert{
+.message-alert {
   color: $Red;
   font-size: $TextAlert;
 }
 
-.button{
+.button {
   border-radius: 5px;
   font-size: $ContentText;
   height: 32px;
   width: 252px;
 }
 
-.section-buttons{
+.section-buttons {
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -61,7 +61,7 @@
   justify-content: space-around;
   position: relative;
 
-  &:before{
+  &:before {
     background-color: $Silver-Chalice;
     content: '';
     height: 2px;
@@ -70,7 +70,7 @@
   }
 }
 
-.button-singUp{
+.button-sing-up{
   background-color: $Earls-Green;
   color: $white;
 }
