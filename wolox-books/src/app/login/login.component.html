@@ -1,0 +1,16 @@
+<div class="from-container">
+  <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
+  <form [formGroup]='registerForm' (ngSubmit)='addPost()'>
+    <div class="section-input" *ngFor="let item of inputData">
+      <label class="text-label">{{ item.text }}</label>
+      <input class="decoration-input" [type]="item.type" [formControlName]="item.formControlName"/>
+      <span class="message-alert" *ngIf="!registerForm.get(item.formControlName).valid && registerForm.get(item.formControlName).touched">
+        {{ messageAlert }}
+      </span>
+    </div>
+    <div class="section-buttons">
+      <input class="button button-sing-up" type="submit" value="Sing Up"/>
+      <input class="button button-login" type="submit" [disabled]="!registerForm.valid" value="Login"/>
+    </div>
+  </form>
+</div>
