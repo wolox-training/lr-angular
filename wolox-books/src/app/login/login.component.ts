@@ -13,12 +13,13 @@ export class LoginComponent implements OnInit {
   registerForm: FormGroup;
   post: any;
   messageAlert: string = 'Campo obligatorio';
-  inputData: any = inputLogin
+  inputData: string = inputLogin;
 
   constructor( private fb: FormBuilder ) { }
 
   ngOnInit() {
     this.buildForm();
+    console.log(inputLogin);
   }
 
   private buildForm(){
