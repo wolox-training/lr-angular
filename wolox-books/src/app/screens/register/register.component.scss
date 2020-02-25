@@ -1,5 +1,5 @@
-@import 'src/scss/color.scss';
-@import 'src/scss/fonts.scss';
+@import 'src/scss/color';
+@import 'src/scss/fonts';
 
 .from-container {
   background-color: $wild-sand;
@@ -70,7 +70,7 @@
   }
 }
 
-.button-sing-up {
+.button-register {
   background-color: $earls-green;
   color: $white;
 }
