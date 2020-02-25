@@ -1,0 +1,81 @@
+@import 'src/scss/color.scss';
+@import 'src/scss/fonts.scss';
+
+.from-container {
+  background-color: $wild-sand;
+  border-top: 8px solid $cerulean;
+  height: 420px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+}
+
+.logo-wolox{
+  display: flex;
+  margin: auto;
+  padding: 10px;
+}
+
+.section-input {
+  display: flex;
+  flex-direction: column;
+  height: 80px;
+  padding: 5px 25px;
+
+  .text-label {
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    size: $content-text;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    color: $black;
+  }
+
+  .decoration-input {
+    border: none;
+    border-radius: 5px;
+    height: 32px;
+    width: 252px;
+  }
+}
+
+.message-alert {
+  color: $red;
+  font-size: $text-alert;
+}
+
+.button {
+  border-radius: 5px;
+  font-size: $content-text;
+  height: 32px;
+  width: 252px;
+}
+
+.section-buttons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  justify-content: space-around;
+  position: relative;
+
+  &:before {
+    background-color: $silver-chalice;
+    content: '';
+    height: 2px;
+    position: absolute;
+    width: 80%;
+  }
+}
+
+.button-sing-up {
+  border: solid 2px $earls-green;
+  color: $earls-green;
+}
+
+.button-login {
+  background-color: $earls-green;
+  color: $white;
+}

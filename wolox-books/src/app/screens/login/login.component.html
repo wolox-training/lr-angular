@@ -1,1 +1,16 @@
-<p>login works!</p>
+<div class="from-container">
+  <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
+  <form [formGroup]='loginForm' (ngSubmit)='loginPost()'>
+    <div class="section-input" *ngFor="let item of inputDataLogin">
+      <label class="text-label">{{ item.text }}</label>
+      <input class="decoration-input" [type]="item.type" [formControlName]="item.formControlName"/>
+      <span class="message-alert" *ngIf="!loginForm.get(item.formControlName).valid && loginForm.get(item.formControlName).touched">
+        {{ messageAlert }}
+      </span>
+    </div>
+    <div class="section-buttons">
+      <input class="button button-login" type="button" value="Login" [disabled]="!loginForm.valid" />
+      <input class="button button-sing-up" type="submit" value="Registro" routerLink="/register" />
+    </div>
+  </form>
+</div>

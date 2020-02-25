@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from "@angular/router"
+import { Router } from "@angular/router";
 
 import { RegisterUserService } from 'src/app/services/register-user.service';
-import {inputLogin} from './constants.js';
+import {inputRegister} from './constants.js';
 
 @Component({
   selector: 'app-register',
@@ -15,7 +15,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   post: any;
   messageAlert: string = 'Campo obligatorio';
-  inputData: string = inputLogin;
+  inputData: string = inputRegister;
 
   constructor( private fb: FormBuilder, private registerUserService: RegisterUserService, private router: Router ) { }
 
@@ -34,7 +34,6 @@ export class RegisterComponent implements OnInit {
   }
 
   addPost() {
-
     const data = {
           password_confirmation: this.registerForm.value.passwordConfirmation,
           first_name: this.registerForm.value.firstName,
@@ -46,5 +45,4 @@ export class RegisterComponent implements OnInit {
     this.registerUserService.userRegister(data).subscribe(responsePost => console.log('Succesfull', responsePost) );
     this.router.navigateByUrl('/login')
   }
-
 }

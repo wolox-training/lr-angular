@@ -1,4 +1,4 @@
-export const inputLogin = [
+export const inputRegister = [
   {
     key: 'name',
     text: 'Nombre',
