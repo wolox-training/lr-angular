@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from "@angular/router";
 
+import { LoginService } from 'src/app/services/login.service';
 import {inputLogin} from './constants.js';
 
 @Component({
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   messageAlert: string = 'Campo obligatorio';
   inputDataLogin: string = inputLogin;
 
-  constructor(private fb: FormBuilder, private router: Router) { }
+  constructor(private fb: FormBuilder, private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
     this.buildForm();
@@ -29,15 +30,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginPost() {
-    const data = {
-          password_confirmation: this.loginForm.value.passwordConfirmation,
-          first_name: this.loginForm.value.firstName,
-          last_name: this.loginForm.value.lastName,
-          locale: "en",
-          ...this.loginForm.value
-    }
-
-    this.registerUserService.userRegister(data).subscribe(responsePost => console.log('Succesfull', responsePost) );
-    this.router.navigateByUrl('/login')
+    this.loginService.loginUser(this.loginForm.value).subscribe(responsePost => console.log('Succesfull', responsePost) );
   }
 }
