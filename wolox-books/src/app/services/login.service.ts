@@ -5,12 +5,12 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class RegisterUserService {
+export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  userRegister(user) {
-    const data = { user };
-    return this.http.post(`${environment.ROOT_URL}/users`, data);
+  loginUser(session) {
+    const data = { session };
+    return this.http.post(`${environment.ROOT_URL}/users/sessions`, data);
   }
 }
