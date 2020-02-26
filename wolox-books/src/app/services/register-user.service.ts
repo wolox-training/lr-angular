@@ -11,6 +11,6 @@ export class RegisterUserService {
 
   userRegister(user) {
     const data = { user };
-    return this.http.post(environment.ROOT_URL+'/users', data);
+    return this.http.post(`${environment.ROOT_URL}/users`, data);
   }
 }
