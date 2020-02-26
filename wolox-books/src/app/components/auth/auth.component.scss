@@ -15,10 +15,14 @@
 
 .logo-wolox {
   object-fit: cover;
-  margin-left: 100px;
+  padding-left: 100px;
 }
 
 .text-logout {
+  background-color: $wild-sand;
+  border: none;
   cursor: pointer;
-  margin-right: 100px;
+  font-size: $content-text;
+  padding-right: 100px;
 }
+
