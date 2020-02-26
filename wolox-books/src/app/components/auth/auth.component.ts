@@ -6,12 +6,9 @@ import { Router } from "@angular/router";
   templateUrl: './auth.component.html',
   styleUrls: ['./auth.component.scss']
 })
-export class AuthComponent implements OnInit {
+export class AuthComponent {
 
   constructor(private router: Router ) { }
-
-  ngOnInit(): void {
-  }
 
   logout() {
     localStorage.removeItem("token");
