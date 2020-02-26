@@ -1,0 +1,26 @@
+@import 'src/scss/color';
+@import 'src/scss/fonts';
+
+.container-nav {
+  align-items: center;
+  background-color: $wild-sand;
+  border-top: 5px solid $cerulean;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 55px;
+  padding: 0 100px;
+  width: 100%;
+}
+
+.logo-wolox {
+  object-fit: cover;
+}
+
+.text-logout {
+  background-color: $wild-sand;
+  border: none;
+  font-size: $content-text;
+}
+
