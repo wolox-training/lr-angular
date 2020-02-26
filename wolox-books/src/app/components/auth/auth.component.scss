@@ -8,14 +8,21 @@
   display: flex;
   font-family: 'Roboto', sans-serif;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 55px;
+  position: relative;
   width: 100%;
-}
 
-.logo-wolox {
-  object-fit: cover;
-  padding-left: 100px;
+  &::before {
+    content: "";
+    background-image: url('../../../assets/LogoWolox-Original.png');
+    background-size: cover;
+    position: absolute;
+    height: 50px;
+    left: 80px;
+    top: -5px;
+    width: 200px;
+  }
 }
 
 .text-logout {
