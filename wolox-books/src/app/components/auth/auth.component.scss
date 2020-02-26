@@ -10,18 +10,17 @@
   flex-direction: row;
   justify-content: space-between;
   height: 55px;
+  padding: 0 100px;
   width: 100%;
 }
 
 .logo-wolox {
   object-fit: cover;
-  padding-left: 100px;
 }
 
 .text-logout {
   background-color: $wild-sand;
   border: none;
   font-size: $content-text;
-  padding-right: 100px;
 }
 
