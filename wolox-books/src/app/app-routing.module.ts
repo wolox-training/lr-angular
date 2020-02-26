@@ -20,7 +20,7 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'home', 
+    path: 'books', 
     component: ListBooksComponent
   }
 ];
