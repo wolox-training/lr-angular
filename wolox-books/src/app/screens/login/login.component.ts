@@ -30,6 +30,8 @@ export class LoginComponent implements OnInit {
   }
 
   loginPost() {
-    this.loginService.loginUser(this.loginForm.value).subscribe(responsePost => console.log('Succesfull', responsePost) );
+    this.loginService.loginUser(this.loginForm.value).subscribe(responsePost => { console.log('Succesfull', responsePost)
+    localStorage.setItem("token", JSON.stringify(responsePost))});
+    this.router.navigateByUrl('/home');
   }
 }
