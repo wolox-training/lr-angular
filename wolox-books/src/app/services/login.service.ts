@@ -11,6 +11,6 @@ export class LoginService {
 
   loginUser(session) {
     const data = { session };
-    return this.http.post(environment.ROOT_URL+'/users/sessions', data);
+    return this.http.post(`${environment.ROOT_URL}/users/sessions`, data);
   }
 }
