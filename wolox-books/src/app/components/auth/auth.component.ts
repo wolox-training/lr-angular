@@ -11,7 +11,7 @@ export class AuthComponent {
   constructor(private router: Router ) { }
 
   logout() {
-    localStorage.removeItem("token");
+    localStorage.removeItem('token');
     this.router.navigateByUrl('/login')
   }
 
