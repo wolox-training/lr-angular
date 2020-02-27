@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './unauth.component.html',
   styleUrls: ['./unauth.component.scss']
 })
-export class UnauthComponent implements OnInit {
-
+export class UnauthComponent {
   constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }
