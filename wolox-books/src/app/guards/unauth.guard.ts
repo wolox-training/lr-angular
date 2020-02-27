@@ -12,24 +12,7 @@ export class UnauthGuard implements CanActivate {
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
-      // const verifyToken = this.loginService.getLocalStorage();
-
-      // console.log(next);
-      // console.log(state);
-      // return verifyToken ? true : (this.router.navigateByUrl('/unauth'), false);
-
-
-
-      const currentUser = this.loginService.getLocalStorage();
-
-    if(!currentUser){
-      console.log(currentUser);
-      //this.router.navigateByUrl('/books');
-      return true;
-    }
-    else{
-      this.router.navigateByUrl('/books');
-      return false;
-    }
+      const verifyToken = this.loginService.getLocalStorage();
+      return !verifyToken ? true : (this.router.navigateByUrl('/books'), false);
   }
 }
