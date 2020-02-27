@@ -9,6 +9,7 @@ import { RegisterComponent } from '../app/screens/register/register.component';
 import { LoginComponent } from './screens/login/login.component';
 import { ListBooksComponent } from './screens/list-books/list-books.component';
 import { AuthComponent } from './components/auth/auth.component';
+import { UnauthComponent } from './screens/unauth/unauth.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AuthComponent } from './components/auth/auth.component';
     RegisterComponent,
     LoginComponent,
     ListBooksComponent,
-    AuthComponent
+    AuthComponent,
+    UnauthComponent
   ],
   imports: [
     BrowserModule,

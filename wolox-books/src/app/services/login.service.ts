@@ -13,4 +13,9 @@ export class LoginService {
     const data = { session };
     return this.http.post(`${environment.ROOT_URL}/users/sessions`, data);
   }
+
+  getLocalStorage() {
+    const valueLocalStorage = !!localStorage.getItem('token');
+    return valueLocalStorage;
+  }
 }

@@ -12,7 +12,7 @@ export class AuthComponent {
 
   logout() {
     localStorage.removeItem('token');
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/')
   }
 
 }
