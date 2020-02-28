@@ -11,6 +11,7 @@ import { ListBooksComponent } from './screens/list-books/list-books.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { SearchBooksPipe } from './pipes/search-books.pipe';
+import { BookDetailComponent } from './screens/list-books/screens/book-detail/book-detail.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SearchBooksPipe } from './pipes/search-books.pipe';
     ListBooksComponent,
     AuthComponent,
     UnauthComponent,
-    SearchBooksPipe
+    SearchBooksPipe,
+    BookDetailComponent
   ],
   imports: [
     BrowserModule,
