@@ -9,6 +9,8 @@ import { ListBooksService } from 'src/app/services/list-books.service';
 })
 export class ListBooksComponent implements OnInit {
 
+  public search:any = '';
+  locked: any[] = [];
   books: any;
 
   constructor(private listBooksService: ListBooksService) { }

@@ -33,3 +33,14 @@
   color: $silver-chalice;
   font-size: $text-alert;
 }
+
+.input-search {
+  border: solid $wild-sand;
+  border-radius: 5px;
+  display: flex;
+  font-size: $text-search;
+  height: 50px;
+  margin: auto;
+  margin-top: 20px;
+  width: 646px;
+}

@@ -1,7 +1,19 @@
-<section class="container-cards">
-  <div class="content-card" *ngFor="let item of books">
-    <img class="img-cards" alt="img-cards" src="assets/img-cards.png">
-    <h3 class="text-title">{{ item.title }}</h3>
-    <span class="text-details">{{ item.author }}</span>
-  </div>
-</section>
+<div>
+  <input class="input-search" type="text" placeholder="Busca por titulo del libro..." [(ngModel)]="query" id="listSearch"/>
+  <section class="container-cards">
+    <div class="content-card" *ngFor="let item of books | searchBooks: query">
+      <img class="img-cards" alt="img-cards" src="assets/img-cards.png">
+      <h3 class="text-title">{{ item.title }}</h3>
+      <span class="text-details">{{ item.author }}</span>
+    </div>
+  </section>
+
+  <!-- <input type="text" class="form-control" placeholder="Search" [(ngModel)]="query" id="listSearch">
+  <div class="panel panel-default col-xs-12 col-sm-11" *ngFor="let lock of locked | searchBooks: query">
+    <label [for]="lock.ID" class="check-label"></label>
+    <h3 class="card-text name">{{lock.User}}</h3>
+    <h3 class="card-text auth">{{lock.AuthID}}</h3>
+    <h3 class="card-text form">{{lock.FormName}}</h3>
+    <h3 class="card-text win">{{lock.WinHandle}}</h3>
+  </div> -->
+</div>
