@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
   loginPost() {
     this.loginService.loginUser(this.loginForm.value)
       .subscribe(
-          responsePost => { localStorage.setItem('token', JSON.stringify(responsePost))
+          responsePost => { localStorage.setItem('token', JSON.stringify(responsePost.access_token))
           this.router.navigateByUrl('/books');
         }
       );
