@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Book } from 'src/app/models/lists-books.model';
 import { ListBooksService } from 'src/app/services/list-books.service';
@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
 export class ListBooksComponent implements OnInit {
 
   books: Observable<Book[]>;
+  query: any;
 
   constructor(private listBooksService: ListBooksService) { }
 
@@ -27,5 +28,4 @@ export class ListBooksComponent implements OnInit {
   listBooks(userId) {
     this.books = this.listBooksService.getListBooks(userId);
   }
-
 }

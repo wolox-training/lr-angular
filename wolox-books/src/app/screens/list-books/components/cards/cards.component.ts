@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Book } from 'src/app/models/lists-books.model';
 
@@ -7,14 +7,10 @@ import { Book } from 'src/app/models/lists-books.model';
   templateUrl: './cards.component.html',
   styleUrls: ['./cards.component.scss']
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent {
 
   @Input() book: Book;
 
   constructor() { }
-
-  ngOnInit() {
-    console.log(this.book);
-  }
 
 }

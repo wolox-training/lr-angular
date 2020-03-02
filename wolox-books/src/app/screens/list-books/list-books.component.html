@@ -1,1 +1,4 @@
-<app-cards class="container-cards" *ngFor="let item of books | async" [book]="item"></app-cards>
+<app-input-search (query)='query=$event'></app-input-search>
+<div class="container-cards">
+  <app-cards [book]="item" *ngFor="let item of books | async | searchBooks: query"></app-cards>
+</div>

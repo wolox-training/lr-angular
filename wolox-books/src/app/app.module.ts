@@ -10,7 +10,10 @@ import { LoginComponent } from './screens/login/login.component';
 import { ListBooksComponent } from './screens/list-books/list-books.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
+import { SearchBooksPipe } from './pipes/search-books.pipe';
+import { BookDetailComponent } from './screens/list-books/screens/book-detail/book-detail.component';
 import { CardsComponent } from './screens/list-books/components/cards/cards.component';
+import { InputSearchComponent } from './screens/list-books/components/input-search/input-search.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { CardsComponent } from './screens/list-books/components/cards/cards.comp
     ListBooksComponent,
     AuthComponent,
     UnauthComponent,
-    CardsComponent
+    SearchBooksPipe,
+    BookDetailComponent,
+    CardsComponent,
+    InputSearchComponent
   ],
   imports: [
     BrowserModule,
