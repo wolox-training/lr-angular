@@ -1,7 +1,1 @@
-<section class="container-cards">
-  <div class="content-card" *ngFor="let item of books">
-    <img class="img-cards" alt="img-cards" src="assets/img-cards.png">
-    <h3 class="text-title">{{ item.title }}</h3>
-    <span class="text-details">{{ item.author }}</span>
-  </div>
-</section>
+<app-cards class="container-cards" [books]="books"></app-cards>
