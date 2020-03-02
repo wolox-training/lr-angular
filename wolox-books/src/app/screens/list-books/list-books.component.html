@@ -1,10 +1,4 @@
-<div>
-  <input class="input-search" type="text" placeholder="Busca por titulo del libro..." [(ngModel)]="query" id="listSearch"/>
-  <section class="container-cards">
-    <div class="content-card" *ngFor="let item of books | searchBooks: query">
-      <img class="img-cards" alt="img-cards" src="assets/img-cards.png">
-      <h3 class="text-title">{{ item.title }}</h3>
-      <span class="text-details">{{ item.author }}</span>
-    </div>
-  </section>
+<app-input-search (query)='query=$event'></app-input-search>
+<div class="container-cards">
+  <app-cards [book]="item" *ngFor="let item of books | async | searchBooks: query"></app-cards>
 </div>

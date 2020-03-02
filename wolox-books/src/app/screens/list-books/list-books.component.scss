@@ -1,46 +1,6 @@
-@import 'src/scss/color';
-@import 'src/scss/fonts';
-
 .container-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 50px 300px;
-}
-
-.content-card {
-  background-color: $white ;
-  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-  height: 320px;
-  padding: 28px;
-  margin: 30px 20px;
-  width: 198px;
-}
-
-.img-cards {
-  object-fit: cover;
-  padding-bottom: 15px;
-}
-
-.text-title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
-  font-size: $text-details-cards;
-  padding-bottom: 3px;
-}
-
-.text-details {
-  color: $silver-chalice;
-  font-size: $text-alert;
-}
-
-.input-search {
-  border: solid $wild-sand;
-  border-radius: 5px;
-  display: flex;
-  font-size: $text-search;
-  height: 50px;
-  margin: auto;
-  margin-top: 20px;
-  width: 646px;
 }

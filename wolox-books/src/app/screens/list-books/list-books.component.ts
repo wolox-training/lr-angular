@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+import { Book } from 'src/app/models/lists-books.model';
 import { ListBooksService } from 'src/app/services/list-books.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-books',
@@ -9,9 +11,10 @@ import { ListBooksService } from 'src/app/services/list-books.service';
 })
 export class ListBooksComponent implements OnInit {
 
+  books: Observable<Book[]>;
   public search:any = '';
   locked: any[] = [];
-  books: any;
+  query: any;
 
   constructor(private listBooksService: ListBooksService) { }
 
@@ -20,12 +23,11 @@ export class ListBooksComponent implements OnInit {
   }
 
   getLocalStorage() {
-    const valueLocalStorage = localStorage.getItem('token').replace(/['"]+/g, '');
-    this.listBooks(valueLocalStorage)
+    const userId = JSON.parse(localStorage.getItem('token'));
+    this.listBooks(userId)
   }
 
-  listBooks(valueLocalStorage) {
-    this.listBooksService.getListBooks(valueLocalStorage).subscribe(responsePost => this.books = responsePost );
+  listBooks(userId) {
+    this.books = this.listBooksService.getListBooks(userId);
   }
-
 }
