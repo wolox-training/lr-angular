@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
+import { ActivatedRoute, Params } from '@angular/router';
+import { ListBooksService } from 'src/app/services/list-books.service';
 
 @Component({
   selector: 'app-book-detail',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookDetailComponent implements OnInit {
 
-  constructor() { }
+  details: any;
 
-  ngOnInit(): void {
+  constructor(private listBooksService: ListBooksService, private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.route.params.subscribe((params: Params) => {
+      const id = params.id;
+      this.getDetailsBooks(id);
+    });
+  }
+
+  getDetailsBooks(id) {
+    console.log(id);
+    const valueLocalStorage = localStorage.getItem('token').replace(/['"]+/g, '');
+    this.listBooksService.getDetailsListBooks(valueLocalStorage, id).subscribe(responsePost => {
+      console.log(responsePost);
+      this.details = responsePost
+    });
   }
 
 }

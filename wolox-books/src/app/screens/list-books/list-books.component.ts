@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from "@angular/router";
 
 import { ListBooksService } from 'src/app/services/list-books.service';
 
@@ -13,7 +14,7 @@ export class ListBooksComponent implements OnInit {
   locked: any[] = [];
   books: any;
 
-  constructor(private listBooksService: ListBooksService) { }
+  constructor(private listBooksService: ListBooksService, private router: Router) { }
 
   ngOnInit() {
     this.getLocalStorage();
@@ -26,6 +27,10 @@ export class ListBooksComponent implements OnInit {
 
   listBooks(valueLocalStorage) {
     this.listBooksService.getListBooks(valueLocalStorage).subscribe(responsePost => this.books = responsePost );
+  }
+
+  getBooksDetail(id) {
+    this.router.navigateByUrl(`/books/${id}`);
   }
 
 }

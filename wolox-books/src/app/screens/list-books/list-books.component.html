@@ -1,10 +1,10 @@
 <div>
   <input class="input-search" type="text" placeholder="Busca por titulo del libro..." [(ngModel)]="query" id="listSearch"/>
-  <section class="container-cards">
-    <div class="content-card" *ngFor="let item of books | searchBooks: query">
+  <div class="container-cards">
+    <button class="content-card" *ngFor="let item of books | searchBooks: query" (click)="getBooksDetail(item.id)">
       <img class="img-cards" alt="img-cards" src="assets/img-cards.png">
       <h3 class="text-title">{{ item.title }}</h3>
       <span class="text-details">{{ item.author }}</span>
-    </div>
-  </section>
+    </button>
+  </div>
 </div>
