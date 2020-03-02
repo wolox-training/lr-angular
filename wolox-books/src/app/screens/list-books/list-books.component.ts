@@ -12,8 +12,6 @@ import { Observable } from 'rxjs';
 export class ListBooksComponent implements OnInit {
 
   books: Observable<Book[]>;
-  public search:any = '';
-  locked: any[] = [];
   query: any;
 
   constructor(private listBooksService: ListBooksService) { }
