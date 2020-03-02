@@ -1,1 +1,1 @@
-<input (keyup)="somethingChanged($event)" class="input-search" type="text" placeholder="Busca por titulo del libro..."/>
+<input [ngModel]="searchText" (ngModelChange)="toggleInputSearch($event)" class="input-search" type="text" placeholder="Busca por titulo del libro..."/>
