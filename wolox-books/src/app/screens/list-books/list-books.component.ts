@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { ListsBooks } from 'src/app/models/ListsBooks.model';
+import { Book } from 'src/app/models/lists-books.model';
 import { ListBooksService } from 'src/app/services/list-books.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-books',
@@ -10,7 +11,7 @@ import { ListBooksService } from 'src/app/services/list-books.service';
 })
 export class ListBooksComponent implements OnInit {
 
-  @Input() books: ListsBooks;
+  books: Observable<Book[]>;
 
   constructor(private listBooksService: ListBooksService) { }
 
@@ -24,7 +25,7 @@ export class ListBooksComponent implements OnInit {
   }
 
   listBooks(userId) {
-    this.listBooksService.getListBooks(userId).subscribe(responsePost => this.books = responsePost );
+    this.books = this.listBooksService.getListBooks(userId);
   }
 
 }

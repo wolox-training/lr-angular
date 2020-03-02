@@ -1,1 +1,1 @@
-<app-cards class="container-cards" [books]="books"></app-cards>
+<app-cards class="container-cards" *ngFor="let item of books | async" [book]="item"></app-cards>

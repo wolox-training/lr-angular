@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import { ListsBooks } from 'src/app/models/ListsBooks.model';
+import { Book } from 'src/app/models/lists-books.model';
 
 @Component({
   selector: 'app-cards',
@@ -9,12 +9,12 @@ import { ListsBooks } from 'src/app/models/ListsBooks.model';
 })
 export class CardsComponent implements OnInit {
 
-  @Input() books: ListsBooks;
+  @Input() book: Book;
 
   constructor() { }
 
-  ngOnInit(): void {
-    console.log(this.books);
+  ngOnInit() {
+    console.log(this.book);
   }
 
 }

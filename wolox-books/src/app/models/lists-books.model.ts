@@ -1,5 +1,5 @@
   
-export interface ListsBooks {
+export interface Book {
   id: number,
   author: string,
   title: string,
