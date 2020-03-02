@@ -10,6 +10,7 @@ import { LoginComponent } from './screens/login/login.component';
 import { ListBooksComponent } from './screens/list-books/list-books.component';
 import { AuthComponent } from './components/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
+import { CardsComponent } from './screens/list-books/components/cards/cards.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UnauthComponent } from './screens/unauth/unauth.component';
     LoginComponent,
     ListBooksComponent,
     AuthComponent,
-    UnauthComponent
+    UnauthComponent,
+    CardsComponent
   ],
   imports: [
     BrowserModule,

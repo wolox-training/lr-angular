@@ -1,1 +1,1 @@
-<div>Lista</div>
+<app-cards class="container-cards" *ngFor="let item of books | async" [book]="item"></app-cards>
