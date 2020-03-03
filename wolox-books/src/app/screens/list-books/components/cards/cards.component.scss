@@ -17,6 +17,13 @@
   width: 140px;
 }
 
+.img-plus {
+  border: solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 .text-title {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
