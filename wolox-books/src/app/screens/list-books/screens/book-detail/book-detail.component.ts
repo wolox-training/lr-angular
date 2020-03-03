@@ -10,6 +10,8 @@ import { ListBooksService } from 'src/app/services/list-books.service';
 export class BookDetailComponent implements OnInit {
 
   details: any;
+  title: string;
+  image_url: string;
 
   constructor(private listBooksService: ListBooksService, private route: ActivatedRoute) { }
 

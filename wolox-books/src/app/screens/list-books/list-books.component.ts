@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from "@angular/router";
 
+import { Book } from 'src/app/models/lists-books.model';
 import { ListBooksService } from 'src/app/services/list-books.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-list-books',
@@ -10,9 +12,8 @@ import { ListBooksService } from 'src/app/services/list-books.service';
 })
 export class ListBooksComponent implements OnInit {
 
-  public search:any = '';
-  locked: any[] = [];
-  books: any;
+  books: Observable<Book[]>;
+  query: any;
 
   constructor(private listBooksService: ListBooksService, private router: Router) { }
 
@@ -21,16 +22,11 @@ export class ListBooksComponent implements OnInit {
   }
 
   getLocalStorage() {
-    const valueLocalStorage = localStorage.getItem('token').replace(/['"]+/g, '');
-    this.listBooks(valueLocalStorage)
+    const userId = JSON.parse(localStorage.getItem('token'));
+    this.listBooks(userId)
   }
 
-  listBooks(valueLocalStorage) {
-    this.listBooksService.getListBooks(valueLocalStorage).subscribe(responsePost => this.books = responsePost );
+  listBooks(userId) {
+    this.books = this.listBooksService.getListBooks(userId);
   }
-
-  getBooksDetail(id) {
-    this.router.navigateByUrl(`/books/${id}`);
-  }
-
 }

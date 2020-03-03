@@ -1,0 +1,30 @@
+@import 'src/scss/color';
+@import 'src/scss/fonts';
+
+.content-card {
+  background-color: $white;
+  box-shadow: 0 3px 6px $color-one-shadow, 0 3px 6px $color-two-shadow;
+  height: 320px;
+  padding: 28px;
+  margin: 30px 20px;
+  width: 198px;
+}
+
+.img-cards {
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  width: 140px;
+}
+
+.text-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: $content-text;
+  padding-bottom: 3px;
+}
+
+.text-details {
+  color: $silver-chalice;
+  font-size: $text-alert;
+}

@@ -1,3 +1,4 @@
+<!-- <<<<<<< HEAD
 <div>
   <input class="input-search" type="text" placeholder="Busca por titulo del libro..." [(ngModel)]="query" id="listSearch"/>
   <div class="container-cards">
@@ -7,4 +8,9 @@
       <span class="text-details">{{ item.author }}</span>
     </button>
   </div>
+======= -->
+<app-input-search (query)='query=$event'></app-input-search>
+<div class="container-cards">
+  <app-cards [book]="item" *ngFor="let item of books | async | searchBooks: query"></app-cards>
+<!-- >>>>>>> ebf540e064430db35afcd684384e251ba1da7aaa -->
 </div>
