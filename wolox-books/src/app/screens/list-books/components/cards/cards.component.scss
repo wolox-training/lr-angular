@@ -4,8 +4,9 @@
 .content-card {
   background-color: $white;
   box-shadow: 0 3px 6px $color-one-shadow, 0 3px 6px $color-two-shadow;
-  height: 320px;
-  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  height: 340px;
   margin: 30px 20px;
   width: 198px;
 }
@@ -18,10 +19,19 @@
 }
 
 .img-plus {
-  border: solid;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.conten-info {
+  height: 85%;
+  padding: 28px 28px 0;
+}
+
+.contetn-plus {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: row-reverse;
+  height: 15%;
 }
 
 .text-title {
@@ -32,6 +42,7 @@
 }
 
 .text-details {
+  font-family: 'Roboto', sans-serif;
   color: $silver-chalice;
   font-size: $text-alert;
 }

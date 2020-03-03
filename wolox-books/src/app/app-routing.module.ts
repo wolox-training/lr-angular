@@ -7,6 +7,7 @@ import { AuthComponent } from './components/auth/auth.component';
 import { UnauthComponent } from './screens/unauth/unauth.component';
 import { AuthGuardGuard } from './guards/auth-guard.guard';
 import { UnauthGuard } from './guards/unauth.guard';
+import { BookDetailComponent } from './screens/list-books/screens/book-detail/book-detail.component';
 
 
 const routes: Routes = [ 
@@ -21,7 +22,8 @@ const routes: Routes = [
     canActivate: [AuthGuardGuard],
     children: [
       { path: '', redirectTo: 'books', pathMatch: 'full' },
-      { path: 'books', component: ListBooksComponent}
+      { path: 'books', component: ListBooksComponent},
+      { path: 'books/:id', component: BookDetailComponent}
     ]
   },
   {

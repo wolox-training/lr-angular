@@ -1,0 +1,80 @@
+@import 'src/scss/color';
+@import 'src/scss/fonts';
+
+.content {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.back {
+  top: 250px;
+  position: absolute;
+  left: 250px;
+}
+
+.content-detail {
+  background-color: $white;
+  box-shadow: 0 3px 6px $color-one-shadow, 0 3px 6px $color-two-shadow;
+  display: flex;
+  height: 350px;
+  width: 800px;
+}
+
+.section-img {
+  margin: auto;
+  text-align: center;
+  width: 35%;
+}
+
+.img-book {
+  height: 75%;
+  width: 70%;
+}
+
+.section-info {
+  width: 70%;
+}
+
+.content-info {
+  height: 30px;
+  padding: 20px;
+}
+
+.content-title {
+  display: flex;
+  height: 50px;
+  padding: 40px 20px;
+  position: relative;
+
+  &::before {
+    bottom: 5px;
+    content: "";
+    background-color: $earls-green;
+    height: 3px;
+    position: absolute;
+    width: 500px;
+  }
+}
+
+.text-title {
+  font-size: $text-title-detail;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.text-genre {
+  color: $silver-chalice;
+  font-size: $content-text;
+}
+
+.text-info-title {
+  font-size: $content-text;
+  font-weight: 600;
+}
+
+.text-info {
+  font-size: $content-text;
+  color: $silver-chalice;
+}

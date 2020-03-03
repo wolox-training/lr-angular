@@ -1,1 +1,22 @@
-<p>book-detail works!</p>
+<div class="content">
+  <a class="back" href="/books">Atás</a>
+  <section class="content-detail">
+    <div class="section-img">
+      <img class="img-book" alt="img-boos" [src]="details.image_url" />
+    </div>
+    <div class="section-info">
+      <div class="content-title">
+        <span class="text-title">{{ details.title }}</span><span class="text-genre">({{ details.genre }})</span>
+      </div>
+      <div class="content-info">
+        <span class="text-info-title">Autor del libro: </span><span class="text-info">{{ details.author }}</span>
+      </div>
+      <div class="content-info">
+        <span class="text-info-title">Editorial: </span><span class="text-info">{{ details.publisher }}</span>
+      </div>
+      <div class="content-info">
+        <span class="text-info-title">Año de publicación: </span><span class="text-info">{{ details.year }}</span>
+      </div>
+    </div>
+  </section>
+</div>

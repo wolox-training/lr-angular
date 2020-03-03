@@ -13,7 +13,7 @@ export class InputSearchComponent implements OnInit {
     this.query.emit(this.searchText);
   }
 
-  @Output() query = new EventEmitter();
+  @Output() query = new EventEmitter<string>();
 
   constructor() { }
   
