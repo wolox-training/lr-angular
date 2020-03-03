@@ -23,9 +23,8 @@ export class BookDetailComponent implements OnInit {
   }
 
   getDetailsBooks(id) {
-    console.log(id);
-    const valueLocalStorage = localStorage.getItem('token').replace(/['"]+/g, '');
-    this.listBooksService.getDetailsListBooks(valueLocalStorage, id).subscribe((responsePost: Book) => { this.details = responsePost });
+    const userId = JSON.parse(localStorage.getItem('token'));
+    this.listBooksService.getDetailsListBooks(userId, id).subscribe((responsePost: Book) => { this.details = responsePost });
   }
 
 }

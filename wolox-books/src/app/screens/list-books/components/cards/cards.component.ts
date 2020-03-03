@@ -17,5 +17,4 @@ export class CardsComponent {
   getBooksDetail(id) {
     this.router.navigateByUrl(`/books/${id}`);
   }
-
 }
