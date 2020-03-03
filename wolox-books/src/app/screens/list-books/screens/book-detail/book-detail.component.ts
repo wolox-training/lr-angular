@@ -1,4 +1,5 @@
 import { Component, OnInit  } from '@angular/core';
+
 import { ActivatedRoute, Params } from '@angular/router';
 import { ListBooksService } from 'src/app/services/list-books.service';
 
@@ -25,10 +26,7 @@ export class BookDetailComponent implements OnInit {
   getDetailsBooks(id) {
     console.log(id);
     const valueLocalStorage = localStorage.getItem('token').replace(/['"]+/g, '');
-    this.listBooksService.getDetailsListBooks(valueLocalStorage, id).subscribe(responsePost => {
-      console.log(responsePost);
-      this.details = responsePost
-    });
+    this.listBooksService.getDetailsListBooks(valueLocalStorage, id).subscribe(responsePost => { this.details = responsePost });
   }
 
 }
