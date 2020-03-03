@@ -18,4 +18,13 @@ export class ListBooksService {
       }
     })
   }
+
+  getDetailsListBooks(valueLocalStorage, id) {
+    return this.http.get(`${environment.ROOT_URL}/books/${id}`, {
+      headers:
+      {
+        'Authorization': valueLocalStorage
+      }
+    })
+  }
 }
