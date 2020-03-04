@@ -1,10 +1,10 @@
-<div class="content-card" (click)="getBooksDetail(book.id)">
-  <div class="conten-info">
+<div class="content-card">
+  <div class="conten-info" (click)="getBooksDetail(book.id)">
     <img class="img-cards" alt="img-cards" [src]='book.image_url'>
     <h3 class="text-title">{{ book.title }}</h3>
     <span class="text-details">{{ book.author }}</span>
   </div>
-  <button class="contetn-plus">
+  <button class="contetn-plus" (click)="togglePlusCart()">
     <img class="img-plus" alt="img-cards" src='assets/plus.png'>
   </button>
 </div>
