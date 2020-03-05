@@ -1,9 +1,9 @@
 <div class="content-card">
-  <div class="content-info" (click)="getBooksDetail(book.id)">
+  <button class="content-info" (click)="getBooksDetail(book.id)">
     <img class="img-cards" alt="img-cards" [src]='book.image_url'>
     <h2 class="text-title">{{ book.title }}</h2>
     <span class="text-details">{{ book.author }}</span>
-  </div>
+  </button>
   <button class="content-plus" (click)="togglePlusCart()">
     <img class="img-plus" alt="img-cards" src='assets/plus.png'>
   </button>
