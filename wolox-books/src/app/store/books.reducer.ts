@@ -7,7 +7,6 @@ export function reducer(state: Book[] = [], action: TutorialActions.Actions) {
         case TutorialActions.ADD_TUTORIAL:
             return [...state, action.payload];
         
-        // Add this case:
         case TutorialActions.REMOVE_TUTORIAL:
             state.splice(action.payload, 1)
             return state;

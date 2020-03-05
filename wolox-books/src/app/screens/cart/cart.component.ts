@@ -21,15 +21,15 @@ export class CartComponent implements OnInit {
   constructor(private dataService: DataService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    // this.countCar();
+    this.countCar();
     this.DetailsCar()
   }
 
-  // countCar() {
-  //   this.dataService.car.subscribe(books => {
-  //     this.count = books.length;
-  //   });
-  // }
+  countCar() {
+    this.dataService.car.subscribe(books => {
+      this.count = books.length;
+    });
+  }
 
   DetailsCar() {
     this.dataService.car.subscribe(books => {
