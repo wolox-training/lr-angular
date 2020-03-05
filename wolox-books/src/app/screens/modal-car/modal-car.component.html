@@ -2,11 +2,9 @@
   <h2 class="title-modal">Tu carrito de compras</h2>
   <div class="content-books-car" *ngFor="let item of tutorials | async; let i = index">
     <span class="text-modal">{{ item.title }} - {{ item.author }} </span>
-    <!-- <button (click)="delTutorial(i)" *ngFor="let tutorial of tutorials | async; let i = index">click -->
     <button (click)="delTutorial(i)">
       <img class="img-delete" alt="img-delete" src="assets/delete.png">
     </button>
-    <!-- </button> -->
   </div>
 </div>
 
