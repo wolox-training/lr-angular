@@ -2,6 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
+
+import { StoreModule } from '@ngrx/store';
+import { reducer } from './store/books.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +21,8 @@ import { BookDetailComponent } from './screens/list-books/screens/book-detail/bo
 import { CardsComponent } from './screens/list-books/components/cards/cards.component';
 import { InputSearchComponent } from './screens/list-books/components/input-search/input-search.component';
 import { CartComponent } from './screens/cart/cart.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ModalCarComponent } from './screens/modal-car/modal-car.component';
 
 @NgModule({
   declarations: [
@@ -28,14 +36,22 @@ import { CartComponent } from './screens/cart/cart.component';
     BookDetailComponent,
     CardsComponent,
     InputSearchComponent,
-    CartComponent
+    CartComponent,
+    ModalCarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NoopAnimationsModule,
+    MatSliderModule,
+    MatDialogModule,
+    CommonModule,
+    StoreModule.forRoot({
+      tutorial: reducer
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
