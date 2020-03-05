@@ -4,10 +4,6 @@ import { ModalCarComponent } from '../modal-car/modal-car.component';
 
 import { DataService } from 'src/app/services/data.service';
 
-export interface DialogData {
-  animal: 'panda' | 'unicorn' | 'lion';
-}
-
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
