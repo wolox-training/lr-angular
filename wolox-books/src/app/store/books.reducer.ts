@@ -1,13 +1,13 @@
 import { Action } from '@ngrx/store'
 import { Book } from '../models/lists-books.model'
-import * as TutorialActions from './books.actions'
+import * as ListBooksCarActions from './books.actions'
 
-export function reducer(state: Book[] = [], action: TutorialActions.Actions) {
+export function reducer(state: Book[] = [], action: ListBooksCarActions.Actions) {
     switch(action.type) {
-        case TutorialActions.ADD_TUTORIAL:
+        case ListBooksCarActions.ADD_BOOKS:
             return [...state, action.payload];
         
-        case TutorialActions.REMOVE_TUTORIAL:
+        case ListBooksCarActions.REMOVE_BOOKS:
             state.splice(action.payload, 1)
             return state;
             

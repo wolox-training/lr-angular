@@ -2,19 +2,19 @@ import { Injectable } from '@angular/core'
 import { Action } from '@ngrx/store'
 import { Book } from '../models/lists-books.model'
 
-export const ADD_TUTORIAL       = '[TUTORIAL] Add'
-export const REMOVE_TUTORIAL    = '[TUTORIAL] Remove'
+export const ADD_BOOKS       = '[BOOKS] Add'
+export const REMOVE_BOOKS    = '[BOOKS] Remove'
 
-export class AddTutorial implements Action {
-    readonly type = ADD_TUTORIAL
+export class AddBooks implements Action {
+    readonly type = ADD_BOOKS
 
     constructor(public payload: Book) {}
 }
 
-export class RemoveTutorial implements Action {
-    readonly type = REMOVE_TUTORIAL
+export class RemoveBooks implements Action {
+    readonly type = REMOVE_BOOKS
 
     constructor(public payload: number) {}
 }
 
-export type Actions = AddTutorial | RemoveTutorial
+export type Actions = AddBooks | RemoveBooks

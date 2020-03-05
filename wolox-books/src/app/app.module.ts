@@ -50,7 +50,7 @@ import { ModalCarComponent } from './screens/modal-car/modal-car.component';
     MatDialogModule,
     CommonModule,
     StoreModule.forRoot({
-      tutorial: reducer
+      listBooksCar: reducer
     })
   ],
   providers: [],
