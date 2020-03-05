@@ -25,7 +25,7 @@ export class CardsComponent {
   }
 
   togglePlusCart() {
-    this.dataService.addBooks(this.book);
+    // this.dataService.addBooks(this.book);
     this.store.dispatch(new ListBooksCarActions.AddBooks({
       id: this.book.id,
       author: this.book.author,
