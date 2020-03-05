@@ -17,19 +17,18 @@ export class CartComponent implements OnInit {
   constructor(private dataService: DataService, public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.countCar();
-    this.DetailsCar()
+    // this.countCar();
   }
 
-  countCar() {
-    this.dataService.car.subscribe(books => {
-      this.count = books.length;
-    });
-  }
+  // countCar() {
+  //   this.dataService.car.subscribe(books => {
+  //     this.count = books.length;
+  //   });
+  // }
 
   DetailsCar() {
     this.dataService.car.subscribe(books => {
-      this.booksCart = books
+      this.booksCart = books;
     });
   }
 
@@ -37,6 +36,7 @@ export class CartComponent implements OnInit {
     this.dialog.open(ModalCarComponent, {
       data: this.booksCart
     });
+    console.log(this.booksCart);
   }
 
 }
