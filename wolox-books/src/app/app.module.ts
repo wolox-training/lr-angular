@@ -14,6 +14,7 @@ import { SearchBooksPipe } from './pipes/search-books.pipe';
 import { BookDetailComponent } from './screens/list-books/screens/book-detail/book-detail.component';
 import { CardsComponent } from './screens/list-books/components/cards/cards.component';
 import { InputSearchComponent } from './screens/list-books/components/input-search/input-search.component';
+import { CartComponent } from './screens/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { InputSearchComponent } from './screens/list-books/components/input-sear
     SearchBooksPipe,
     BookDetailComponent,
     CardsComponent,
-    InputSearchComponent
+    InputSearchComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,10 @@
 <nav class="container-nav">
-  <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
-  <button class="text-logout" (click)="logout()">Logout</button>
+  <div class="content-logo">
+    <img class="logo-wolox" alt="logo-wolox" src="assets/LogoWolox-Original.png">
+  </div>
+  <div class="content-logout-count">
+    <app-cart></app-cart>
+    <button class="text-logout" (click)="logout()">Logout</button>
+  </div>
 </nav>
 <router-outlet></router-outlet>

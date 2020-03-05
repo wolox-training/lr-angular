@@ -10,20 +10,20 @@ export class ListBooksService {
 
   constructor(private http: HttpClient) { }
 
-  getListBooks(valueLocalStorage) {
+  getListBooks(userId) {
     return this.http.get<Book[]>(`${environment.ROOT_URL}/books`, {
       headers:
       {
-        'Authorization': valueLocalStorage
+        'Authorization': userId.access_token
       }
     })
   }
 
-  getDetailsListBooks(valueLocalStorage, id) {
+  getDetailsListBooks(userId, id) {
     return this.http.get(`${environment.ROOT_URL}/books/${id}`, {
       headers:
       {
-        'Authorization': valueLocalStorage
+        'Authorization': userId.access_token
       }
     })
   }
