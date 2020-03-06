@@ -41,7 +41,6 @@ export class CartComponent implements OnInit {
   }
 
   openDialog() {
-    console.log(this.books);
     this.dialog.open(ModalCarComponent, {
       data: this.booksCart
     });
