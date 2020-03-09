@@ -2,9 +2,17 @@
 <xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
   <file source-language="en-US" datatype="plaintext" original="ng2.template">
     <body>
-      <trans-unit id="introductionHeader" datatype="html">
-        <source>Hello</source>
-        <target state="new">Hola</target>
+      <trans-unit id="textDetailsAuthor" datatype="html">
+        <source>Author of the book</source>
+        <target state="new">Autor del libro: </target>
+      </trans-unit>
+      <trans-unit id="textDetailsEditorial" datatype="html">
+        <source>Editorial</source>
+        <target state="new">Editorial: </target>
+      </trans-unit>
+      <trans-unit id="textDetailsPublications" datatype="html">
+        <source>Year of publication</source>
+        <target state="new">Año de publicación: </target>
       </trans-unit>
     </body>
   </file>
