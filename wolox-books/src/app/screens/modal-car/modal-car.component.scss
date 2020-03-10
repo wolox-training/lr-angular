@@ -29,3 +29,27 @@
 .img-delete {
   margin-left: 20px;
 }
+
+.content-without-data {
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  justify-content: space-around;
+  width: 800px;
+}
+
+.img-without {
+  object-fit: contain;
+}
+
+.title-modal-without {
+  font-weight: 600;
+  font-size: $text-title-witout;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content-modal-without {
+  font-size: $text-title-witout;
+  text-align: center;
+}

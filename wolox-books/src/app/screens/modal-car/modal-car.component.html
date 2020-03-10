@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="booksData; else withOutData">
   <h1 class="title-modal">Tu carrito de compras</h1>
   <div class="content-books-car" *ngFor="let item of books; let i = index">
     <span class="text-modal">{{ item.title | slice:0:10 }} - {{ item.author | slice:0:15 }} </span>
@@ -7,4 +7,14 @@
     </button>
   </div>
 </div>
+
+<ng-template #withOutData>
+  <div class="content-without-data">
+    <h2 class="title-modal">Tu carrito de compras</h2>
+    <img class="img-without" alt="img-car" src="assets/car2.png">
+    <span class="title-modal-without">el carrito está vacío</span>
+    <span class="content-modal-without">Parece que no tenés items en tu carrito de compras</span>
+  </div>
+</ng-template>
+
 

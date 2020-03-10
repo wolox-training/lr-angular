@@ -15,16 +15,22 @@ import * as ListBooksCarActions from '../../store/books.actions';
 export class ModalCarComponent implements OnInit {
 
   books: Observable<Book[]>;
+  booksData: boolean;
+  valueDataBooks: number;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data, private store: Store<AppState>) {
     store.subscribe(e => { this.books = e.listBooksCar.books });
   }
 
   ngOnInit(): void {
+    this.viewData();
+  }
+
+  viewData() {
+    this.booksData = this.books.length >= 1 ? true : false;
   }
 
   deleteBooks(index) {
     this.store.dispatch(new ListBooksCarActions.RemoveBooks(index) )
   }
-
 }
