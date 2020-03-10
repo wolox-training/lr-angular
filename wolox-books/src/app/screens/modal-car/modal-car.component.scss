@@ -1,0 +1,31 @@
+@import 'src/scss/color';
+@import 'src/scss/fonts';
+
+.content-books-car {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-color: $silver-chalice;
+    bottom: -20px;
+    height: 1px;
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.title-modal {
+  font-size: $text-title-modal;
+}
+
+.text-modal {
+  font-size: $text-title-detail;
+}
+
+.img-delete {
+  margin-left: 20px;
+}

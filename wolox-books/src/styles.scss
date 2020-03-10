@@ -1,1 +1,9 @@
 @import 'src/scss/equalizer';
+@import '~@angular/material/theming';
+@include mat-core();
+$wolox-books-primary: mat-palette($mat-indigo);
+$wolox-books-accent: mat-palette($mat-pink, A200, A100, A400);
+$wolox-books-warn: mat-palette($mat-red);
+$wolox-books-theme: mat-light-theme($wolox-books-primary, $wolox-books-accent, $wolox-books-warn);
+@include angular-material-theme($wolox-books-theme);
+
