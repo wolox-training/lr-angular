@@ -20,7 +20,6 @@ export class ModalCarComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data, private store: Store<AppState>) {
     store.subscribe(e => { this.books = e.listBooksCar.books });
-    store.subscribe(e => { this.valueDataBooks = e.listBooksCar.books.length, console.log(e.listBooksCar.books.length) });
   }
 
   ngOnInit(): void {
@@ -28,7 +27,7 @@ export class ModalCarComponent implements OnInit {
   }
 
   viewData() {
-    this.booksData = this.valueDataBooks >= 1 ? true : false;
+    this.booksData = this.books.length >= 1 ? true : false;
   }
 
   deleteBooks(index) {
