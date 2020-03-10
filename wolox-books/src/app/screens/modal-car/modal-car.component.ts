@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import {MAT_DIALOG_DATA} from '@angular/material/dialog';
