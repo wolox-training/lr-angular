@@ -10,7 +10,8 @@ export function reducer(state = initialState, action: ListBooksCarActions.Action
             return {...state, books: [...state.books, action.payload]}
         
         case ListBooksCarActions.REMOVE_BOOKS:
-            return [...state.books, action.payload]
+            state.books.splice(action.payload, 1)
+            return state;
             
         default:
             return state;
