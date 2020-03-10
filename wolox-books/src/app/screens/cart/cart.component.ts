@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
   books: Observable<Book[]>;
 
   constructor(private dataService: DataService, public dialog: MatDialog, private store: Store<AppState>) { 
-    store.subscribe(e => { this.count = e.listBooksCar.length - 1 });
+    store.subscribe(e => {this.count = e.listBooksCar.books.length });
    }
 
   ngOnInit(): void {

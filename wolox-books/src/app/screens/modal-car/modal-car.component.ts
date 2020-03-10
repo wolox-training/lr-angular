@@ -17,7 +17,7 @@ export class ModalCarComponent implements OnInit {
   books: Observable<Book[]>;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data, private store: Store<AppState>) {
-    this.books = store.select('listBooksCar');
+    store.subscribe(e => { this.books = e.listBooksCar.books });
   }
 
   ngOnInit(): void {
