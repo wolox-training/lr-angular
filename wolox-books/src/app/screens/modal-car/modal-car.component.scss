@@ -2,11 +2,11 @@
 @import 'src/scss/fonts';
 
 .content-books-car {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin: 30px 0;
   position: relative;
-
-  display: flex;
-    justify-content: space-between;
 
   &::before {
     content: '';

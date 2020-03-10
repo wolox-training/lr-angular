@@ -9,3 +9,8 @@ export interface Book {
   image_url: string,
   description: string
 }
+
+export interface ShoppingCarState {
+  books: Book[],
+  loading: boolean
+}

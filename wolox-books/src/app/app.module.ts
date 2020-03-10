@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule } from '@angular/material/dialog';
 import { CommonModule } from '@angular/common';
-
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { reducer } from './store/books.reducer';
 
@@ -51,7 +51,8 @@ import { ModalCarComponent } from './screens/modal-car/modal-car.component';
     CommonModule,
     StoreModule.forRoot({
       listBooksCar: reducer
-    })
+    }),
+    StoreDevtoolsModule.instrument({})
   ],
   providers: [],
   bootstrap: [AppComponent]

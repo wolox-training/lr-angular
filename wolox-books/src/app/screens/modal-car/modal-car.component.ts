@@ -19,8 +19,8 @@ export class ModalCarComponent implements OnInit {
   valueDataBooks: number;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data, private store: Store<AppState>) {
-    this.books = store.select('listBooksCar');
-    store.subscribe(e => { this.valueDataBooks = e.listBooksCar.length });
+    store.subscribe(e => { this.books = e.listBooksCar.books });
+    store.subscribe(e => { this.valueDataBooks = e.listBooksCar.books.length, console.log(e.listBooksCar.books.length) });
   }
 
   ngOnInit(): void {
