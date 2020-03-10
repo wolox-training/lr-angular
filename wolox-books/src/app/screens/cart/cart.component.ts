@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
   books: Observable<Book[]>;
 
   constructor(private dataService: DataService, public dialog: MatDialog, private store: Store<AppState>) { 
-    store.subscribe(e => { this.count = e.listBooksCar.length });
+    store.subscribe(e => { this.count = e.listBooksCar.length - 1 });
    }
 
   ngOnInit(): void {
@@ -41,7 +41,6 @@ export class CartComponent implements OnInit {
   }
 
   openDialog() {
-    console.log(this.books);
     this.dialog.open(ModalCarComponent, {
       data: this.booksCart
     });

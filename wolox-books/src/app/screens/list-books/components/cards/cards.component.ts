@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 import { DataService } from 'src/app/services/data.service';
 import { Book } from 'src/app/models/lists-books.model';
 import * as ListBooksCarActions from 'src/app/store/books.actions';
-import { AppState } from '../../../../app.state';
+import { AppState } from 'src/app/app.state';
 
 @Component({
   selector: 'app-cards',
@@ -25,7 +25,6 @@ export class CardsComponent {
   }
 
   togglePlusCart() {
-    // this.dataService.addBooks(this.book);
     this.store.dispatch(new ListBooksCarActions.AddBooks({
       id: this.book.id,
       author: this.book.author,
