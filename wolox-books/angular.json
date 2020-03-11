@@ -60,7 +60,14 @@
                   "maximumError": "10kb"
                 }
               ]
-            }
+            },
+            "es": {
+              "aot": true,
+              "outputPath": "dist/wolox-books-es/",
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es"
+         }
           }
         },
         "serve": {
@@ -71,7 +78,10 @@
           "configurations": {
             "production": {
               "browserTarget": "wolox-books:build:production"
-            }
+            },
+            "es": {
+              "browserTarget": "wolox-books:build:es"
+          }
           }
         },
         "extract-i18n": {
